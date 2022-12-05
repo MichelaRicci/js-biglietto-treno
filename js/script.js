@@ -13,6 +13,24 @@ console.log('JS OK');
 5. Stampare in pagina */
 
 
+// Chiedere all'utente quanti km vuole percorrere
+
+const kmTrip = parseInt(prompt('Quanti chilometri devi percorrere?'));
+
+
+// Chiedere all'utente quanti anni ha
+
+const userAge = parseInt(prompt('Quanti anni hai'));
+
+
+// Calcolare prezzo totale del viaggio (prezzo finale per utenti 19-64 anni)
+
+const priceKm = 0.21;
+
+const priceTrip = (kmTrip * priceKm);
+
+console.log(priceTrip);
+
 
 
 
