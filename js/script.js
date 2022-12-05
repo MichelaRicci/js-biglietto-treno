@@ -15,21 +15,34 @@ console.log('JS OK');
 
 // Chiedere all'utente quanti km vuole percorrere
 
-const kmTrip = parseInt(prompt('Quanti chilometri devi percorrere?'));
+const kmTrip = prompt('Quanti chilometri devi percorrere?');
 
 
 // Chiedere all'utente quanti anni ha
 
-const userAge = parseInt(prompt('Quanti anni hai'));
+const userAge = prompt('Quanti anni hai');
+
+console.log (kmTrip, userAge);
 
 
 // Calcolare prezzo totale del viaggio (prezzo finale per utenti 19-64 anni)
 
-const priceKm = 0.21;
 
-const priceTrip = (kmTrip * priceKm);
+const priceTrip = (kmTrip * 0.21);
 
-console.log(priceTrip);
+
+// Sconti applicati 
+
+if (userAge < 18) {
+    console.log (priceTrip - (priceTrip * 0.2));
+  } else if (userAge > 65) {
+    console.log (priceTrip - (priceTrip * 0.4));
+  } else {
+    console.log (priceTrip);
+  }
+
+
+  
 
 
 
