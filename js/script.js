@@ -44,9 +44,9 @@ const priceTrip = (kmTrip * 0.21);
 let discount;
 
 if (userAge < 18) {
-   discount = priceTrip - (priceTrip * 0.2);
+   discount = priceTrip * 0.8;
 } else if (userAge >= 65) {
-    discount = priceTrip - (priceTrip * 0.4);
+    discount = priceTrip * 0.6;
 } else {
     discount = priceTrip;
 }
