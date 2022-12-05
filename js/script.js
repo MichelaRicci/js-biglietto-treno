@@ -25,6 +25,14 @@ const userAge = prompt('Quanti anni hai?');
 console.log (kmTrip, userAge);
 
 
+// Validazione dati inseriti
+
+if (isNaN (kmTrip || userAge)) {
+    isValid = false;
+    alert("Inserisci un valore numerico");
+}
+
+
 // Calcolare prezzo totale del viaggio (prezzo finale per utenti 19-64 anni)
 
 
