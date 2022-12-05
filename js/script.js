@@ -45,14 +45,16 @@ let discount;
 
 if (userAge < 18) {
    discount = priceTrip - (priceTrip * 0.2);
-  } else if (userAge >= 65) {
+} else if (userAge >= 65) {
     discount = priceTrip - (priceTrip * 0.4);
-  } else {
+} else {
     discount = priceTrip;
-  }
+}
 
 
-  document.getElementById('ticket').innerText = 'Il prezzo del tuo biglietto è: ' + discount + '€';
+discount = (Math.round(discount * 100) / 100).toFixed(2);
+  
+document.getElementById('ticket').innerText = 'Il prezzo del tuo biglietto è: ' + discount + '€';
 
 
   
