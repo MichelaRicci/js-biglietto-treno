@@ -15,12 +15,12 @@ console.log('JS OK');
 
 // Chiedere all'utente quanti km vuole percorrere
 
-const kmTrip = prompt('Quanti chilometri devi percorrere?');
+const kmTrip = Number(prompt('Quanti chilometri devi percorrere?'));
 
 
 // Chiedere all'utente quanti anni ha
 
-const userAge = prompt('Quanti anni hai');
+const userAge = Number(prompt('Quanti anni hai?'));
 
 console.log (kmTrip, userAge);
 
@@ -28,21 +28,23 @@ console.log (kmTrip, userAge);
 // Calcolare prezzo totale del viaggio (prezzo finale per utenti 19-64 anni)
 
 
-let priceTrip = (kmTrip * 0.21);
+const priceTrip = (kmTrip * 0.21);
 
 
 // Sconti applicati 
 
+let discount;
+
 if (userAge < 18) {
-    console.log (priceTrip - (priceTrip * 0.2));
-  } else if (userAge > 65) {
-    console.log (priceTrip - (priceTrip * 0.4));
+   discount = priceTrip - (priceTrip * 0.2);
+  } else if (userAge >= 65) {
+    discount = priceTrip - (priceTrip * 0.4);
   } else {
-    console.log (priceTrip);
+    discount = priceTrip;
   }
 
 
-  document.getElementById('ticket').innerText = 'Il prezzo del tuo biglietto è: ' + priceTrip + '€';
+  document.getElementById('ticket').innerText = 'Il prezzo del tuo biglietto è: ' + discount.toFixed(2) + '€';
 
 
   
