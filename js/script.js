@@ -28,7 +28,7 @@ console.log (kmTrip, userAge);
 // Calcolare prezzo totale del viaggio (prezzo finale per utenti 19-64 anni)
 
 
-const priceTrip = (kmTrip * 0.21);
+let priceTrip = (kmTrip * 0.21);
 
 
 // Sconti applicati 
@@ -40,6 +40,9 @@ if (userAge < 18) {
   } else {
     console.log (priceTrip);
   }
+
+
+  document.getElementById('ticket').innerText = 'Il prezzo del tuo biglietto è: ' + priceTrip + '€';
 
 
   
